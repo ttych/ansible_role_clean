@@ -1,12 +1,13 @@
 ---
 
-- name: "create {{ item }} user"
+- name: "clean users"
   user:
     name: "{{ item }}"
     state: absent
+    # remove: true
   loop: "{{ clean_users }}"
 
-- name: "delete {{ item }} group"
+- name: "clean groups"
   group:
     name: "{{ item }}"
     state: absent
