@@ -1,2 +1,7 @@
 ---
-# vars file for ansible_role_clean
+
+clean_users:
+  - install
+
+clean_groups:
+  - install

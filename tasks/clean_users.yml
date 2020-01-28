@@ -1,0 +1,13 @@
+---
+
+- name: "create {{ item }} user"
+  user:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ clean_users }}"
+
+- name: "delete {{ item }} group"
+  group:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ clean_groups }}"
